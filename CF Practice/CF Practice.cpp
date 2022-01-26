@@ -412,7 +412,7 @@
 //	return 0;
 //}
 
-//236A - Boy or Girl (not done)
+//236A - Boy or Girl
 
 //#include <bits/stdc++.h>
 //using namespace std;
@@ -447,66 +447,6 @@
 //
 //	return 0;
 //}
-
-#include <bits/stdc++.h>
-using namespace std;
-
-#define endl   "\n"
-#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
-
-int main() {
-	PAIN;
-
-	string name{};
-	int count{};
-	cin >> name;
-
-	for (int i = 0; i < name.length(); i++)
-	{
-		for (int j = 0; j < i; j++)
-		{
-			if (name[i] != name[j])
-			{
-				count++;
-			}
-		}
-	}
-	if (count % 2 == 0)
-	{
-		cout << "CHAT WITH HER!" << endl;
-	}
-	else
-	{
-		cout << "IGNORE HIM!" << endl;
-	}
-
-	return 0;
-}
-
-#include <iostream>
-using namespace std;
-string a;
-int pas = 1, num;
-int main() {
-	cin >> a;
-	for (int i = 0; i < a.size(); i++) {
-		for (int j = 0; j < i; j++) {
-			if (a[i] == a[j]) {
-				num++;
-			}
-		}
-		if (num == 0) {
-			pas++;
-		}
-		num = 0;
-	}
-	if (pas % 2 == 0) {
-		cout << "IGNORE HIM!";
-	}
-	else {
-		cout << "CHAT WITH HER!";
-	}
-}
 
 //791A - Bear and Big Brother
 
