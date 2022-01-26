@@ -553,6 +553,77 @@
 
 //59A - Word
 
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//#define endl   "\n"
+//#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+//#define ll     long long
+//
+//int main() {
+//	PAIN;
+//
+//	string str{};
+//	int big{}, small{};
+//	cin >> str;
+//	int len = str.length();
+//
+//	for (int i = 0; i < len; i++)
+//	{
+//		char ch = str[i];
+//		if (ch == toupper(ch))
+//		{
+//			big++;
+//		}
+//		else
+//		{
+//			small++;
+//		}
+//	}
+//	if (small < big)
+//	{
+//		transform(str.begin(), str.end(), str.begin(), ::toupper);
+//		cout << str << endl;
+//	}
+//	else if (small >= big)
+//	{
+//		transform(str.begin(), str.end(), str.begin(), ::tolower);
+//		cout << str << endl;
+//	}
+//
+//	return 0;
+//}
+
+//977A - Wrong Substractions
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//#define endl   "\n"
+//#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+//#define ll     long long
+//
+//int main() {
+//	PAIN;
+//	int n{}, k{}, sum{};
+//	cin >> n >> k;
+//	while (k--)
+//	{
+//		if (n % 10 != 0)
+//		{
+//			n -= 1;
+//		}
+//		else
+//		{
+//			n /= 10;
+//		}
+//	}
+//	cout << n << endl;
+//	return 0;
+//}
+
+//266B - Queue at the School
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -563,34 +634,40 @@ using namespace std;
 int main() {
 	PAIN;
 
+	int n{}, t{};
 	string str{};
-	int len = str.length();
-	int big{}, small{};
-	cin >> str;
+	cin >> n >> t >> str;
 
-	for (int i = 0; i < len; i++)
+	while (t--)
 	{
-		char ch = str[i];
-		if (ch == toupper(ch))
+		for (int i = 1; i < n; i++)
 		{
-			big++;
-		}
-		else
-		{
-			small++;
+			if (str[i] == 'G' && str[i - 1] == 'B')
+			{
+				str[i] = 'B';
+				str[i - 1] = 'G';
+				i++;
+			}
 		}
 	}
-	if (small >= big)
-	{
-		transform(str.begin(), str.end(), str.begin(), ::toupper);
-
-		cout << str << endl;
-	}
-	else
-	{
-		transform(str.begin(), str.end(), str.begin(), ::tolower);
-		cout << str << endl;
-	}
-
+	cout << str << endl;
 	return 0;
 }
+
+//110A - Nearly Lucky Number
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//#define endl   "\n"
+//#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+//#define ll     long long
+//
+//int main() {
+//	PAIN;
+//
+//
+//
+//
+//	return 0;
+//}
