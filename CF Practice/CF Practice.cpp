@@ -475,3 +475,122 @@
 //		}
 //	}
 //}
+
+// 546A - Soldier and Bananas
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//#define endl   "\n"
+//#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+//#define ll     long long
+//
+//int main() {
+//	PAIN;
+//	int has{}, pays{}, quantity{}, total{}, price{};
+//
+//	cin >> pays >> has >> quantity;
+//
+//	for (int i = 1; i <= quantity; i++)
+//	{
+//		price += pays * i;
+//	}
+//	total = price - has;
+//	if (total <= 0)
+//	{
+//		total = 0;
+//	}
+//	cout << total << endl;
+//	return 0;
+//}
+
+//617A - Elephant
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//#define endl   "\n"
+//#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+//#define ll     long long
+//
+//int main() {
+//	PAIN;
+//	int x{}, min{};
+//	cin >> x;
+//
+//	while (x > 0)
+//	{
+//		if (x >= 5)
+//		{
+//			x -= 5;
+//			min++;
+//		}
+//		if (x >= 4 && x < 5)
+//		{
+//			x -= 4;
+//			min++;
+//		}
+//		if (x >= 3 && x < 4)
+//		{
+//			x -= 3;
+//			min++;
+//		}
+//		if (x >= 2 && x < 3)
+//		{
+//			x -= 2;
+//			min++;
+//		}
+//		if (x >= 1 && x < 2)
+//		{
+//			x -= 1;
+//			min++;
+//		}
+//	}
+//	cout << min << endl;
+//
+//	return 0;
+//}
+
+//59A - Word
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define endl   "\n"
+#define PAIN   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define ll     long long
+
+int main() {
+	PAIN;
+
+	string str{};
+	int len = str.length();
+	int big{}, small{};
+	cin >> str;
+
+	for (int i = 0; i < len; i++)
+	{
+		char ch = str[i];
+		if (ch == toupper(ch))
+		{
+			big++;
+		}
+		else
+		{
+			small++;
+		}
+	}
+	if (small >= big)
+	{
+		transform(str.begin(), str.end(), str.begin(), ::toupper);
+
+		cout << str << endl;
+	}
+	else
+	{
+		transform(str.begin(), str.end(), str.begin(), ::tolower);
+		cout << str << endl;
+	}
+
+	return 0;
+}
